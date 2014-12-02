@@ -1,0 +1,30 @@
+digraph G{
+label=<<FONT POINT-SIZE="20">vfe stats stream state machine</FONT>>;
+forcelabels=true;
+#labeljust=l;
+labelloc=t;
+#mode=KK;
+rankdir=LR;
+model=mds;
+STATS_INACTIVE[shape=circle, label="STATS_INACTIVE"];
+STATS_START_PENDING[shape=circle, label="STATS_START_PENDING"];
+STATS_STARTING[shape=circle, label="STATS_STARTING"];
+STATS_STOP_PENDING[shape=circle, label="STATS_STOP_PENDING"];
+STATS_STOPPING[shape=circle, label="STATS_STOPPING"];
+STATS_ACTIVE[shape=circle, label="STATS_ACTIVE"];
+
+
+STATS_INACTIVE->STATS_START_PENDING;
+STATS_START_PENDING->STATS_STARTING[label="reg update"];
+STATS_STARTING->STATS_ACTIVE[label="another reg update, activate it"];
+
+STATS_INACTIVE->STATS_ACTIVE[label="pix0 is not active, activate it directly"];
+STATS_ACTIVE->STATS_INACTIVE[label="pix0 is not active, deactivate it directly"];
+STATS_ACTIVE->STATS_STOP_PENDING;
+STATS_STOP_PENDING->STATS_STOPPING[label="reg update"];
+STATS_STOPPING->STATS_INACTIVE[label="reg update"];
+{rank=same; STATS_STOPPING STATS_START_PENDING}
+{rank=same; STATS_STOP_PENDING STATS_STARTING}
+#{rank=same; STATS_ACTIVE STATS_INACTIVE}
+
+}

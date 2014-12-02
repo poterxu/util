@@ -1,0 +1,67 @@
+digraph G{
+label=<<FONT POINT-SIZE="20"> </FONT>>;
+forcelabels=true;
+#labeljust=l;
+labelloc=t;
+mode=KK;
+splines=false;
+#rankdir=LR;
+Snapdragon[shape=circle, label="Snapdragon"];
+Snapdragon_S3[shape=circle, label="Snapdragon\n S3"];
+MSM8660[shape=circle, label="MSM8660"];
+
+Snapdragon_800[shape=circle, label="Snapdragon\n 800"];
+
+Snapdragon_801[shape=circle, label="Snapdragon\n 801"];
+#Snapdragon_805[shape=circle, label="Snapdragon\n 805"];
+
+Snapdragon_810[shape=circle, label="Snapdragon\n 810"];
+
+Snapdragon_8xx[shape=circle, label="Snapdragon\n 8xx"];
+Snapdragon->Snapdragon_S3;
+Snapdragon_S3->MSM8660;
+
+Snapdragon->Snapdragon_8xx;
+Snapdragon_8xx->Snapdragon_800;
+Snapdragon_8xx->Snapdragon_801;
+#Snapdragon_8xx->Snapdragon_805;
+Snapdragon_8xx->Snapdragon_810;
+__8074AA[shape=circle, label="8074-AA"];
+
+__8074AB[shape=circle, label="8074-AB"];
+__8274AB[shape=diamond, label="8274-AB", xlabel=<<FONT COLOR='red' POINT-SIZE="10">Smartisan T1 P1~P2</FONT>>];
+__8274AC[shape=diamond, label="8274-AC",xlabel=<<FONT COLOR='red' POINT-SIZE="10">Smartisan T1 WCDMA</FONT>>];
+__8274AA[shape=diamond, label="8274-AA"];
+__8674AA[shape=box, label="8674-AA"];
+
+__8674AB[shape=box, label="8674-AB"];
+
+__8974AC[shape=pentagon, label="8974-AC",xlabel=<<FONT COLOR='red' POINT-SIZE="10">Smartisan T1 LTE, Smartisan T1 CDMA</FONT>>];
+__8974AB[shape=pentagon, label="8974-AB"];
+
+__8974AA[shape=pentagon, label="8974-AA"];
+
+__8994[shape=pentagon, label="8994", xlabel=<<FONT COLOR='red' POINT-SIZE="10">Smartisan T2</FONT>>];
+
+
+#Snapdragon_801->__8974AC;
+Snapdragon_801->__8074AB;
+Snapdragon_801->__8274AB;
+Snapdragon_801->__8974AB;
+Snapdragon_800->__8074AA;
+Snapdragon_800->__8274AA;
+Snapdragon_800->__8674AA;
+Snapdragon_801->__8674AB;
+
+Snapdragon_800->__8974AA;
+#Snapdragon_801->__8274AC;
+#Snapdragon_801->__8674AB;
+__8974AB->__8974AC;
+__8274AB->__8274AC;
+
+Snapdragon_810->__8994;
+{rank=same; __8074AB __8674AB __8974AB __8274AB}
+{rank=same; __8074AA __8674AA __8974AA __8274AA}
+{rank=same; __8274AC __8974AC}
+{rank=same; Snapdragon_800 Snapdragon_801 Snapdragon_810}
+}

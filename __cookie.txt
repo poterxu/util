@@ -1,0 +1,58 @@
+# Cookies for domains related to xunlei.com.
+# This content may be pasted into a cookies.txt file and used by wget
+# Example:  wget -x --load-cookies cookies.txt http://dynamic.cloud.vip.xunlei.com/user_task?userid=218484461&st=4&t=1413709717.646
+#
+.stat.xunlei.com	TRUE	/	FALSE	1710958214	_xlcgvid	201403242830604284925787
+.xunlei.com	TRUE	/	FALSE	0	check_result	0:!eeh
+.xunlei.com	TRUE	/	FALSE	0	active	0
+.xunlei.com	TRUE	/	FALSE	0	blogresult	0
+.xunlei.com	TRUE	/	FALSE	0	downbyte	0
+.xunlei.com	TRUE	/	FALSE	0	downfile	0
+.xunlei.com	TRUE	/	FALSE	0	isspwd	0
+.xunlei.com	TRUE	/	FALSE	0	isvip	5
+.xunlei.com	TRUE	/	FALSE	0	jumpkey	7492A28F8FCB3009775B02E86F80A9AA605ACFC0563A18570582B8455130779CD7C9FA91C9016A0D2FBA2BD829BE0A5AD1E02F53AC78B64E21E92B9B1C6F071188D816D25846C6564E17072A59D5FC6261CD5DFF418F2B0C2578F11191567A6E
+.xunlei.com	TRUE	/	FALSE	0	logintype	1
+.xunlei.com	TRUE	/	FALSE	1416301720	lsessionid	47684D018CDE2E1F1F95D40A2BD94DC5F651058B5E9772994D8BF11E2A56CD210F7FD64BC0BBA183AF2240E3ECDFCF1F4D8BB31AB89DB1D4DB9C10594541E5D25FEFC5508BCFB76A3D48F572AFC6E615
+.xunlei.com	TRUE	/	FALSE	1416301720	luserid	218484461
+.xunlei.com	TRUE	/	FALSE	0	nickname	poterxu
+.xunlei.com	TRUE	/	FALSE	0	onlinetime	0
+.xunlei.com	TRUE	/	FALSE	0	order	165575555
+.xunlei.com	TRUE	/	FALSE	0	safe	0
+.xunlei.com	TRUE	/	FALSE	0	score	200
+.xunlei.com	TRUE	/	FALSE	0	sessionid	A030ABA935731CC63A390BF5014CDFD227F9CAD773D1C5A28893D40B9A75266F1BB03D80CEFDCD26FD6581DBB028D5E92DCFF9860E0C0B1BA24E24EF9100D1AC
+.xunlei.com	TRUE	/	FALSE	0	sex	u
+.xunlei.com	TRUE	/	FALSE	0	upgrade	0
+.xunlei.com	TRUE	/	FALSE	0	userid	218484461
+.xunlei.com	TRUE	/	FALSE	0	usernewno	812115271
+.xunlei.com	TRUE	/	FALSE	0	usernick	poterxu
+.xunlei.com	TRUE	/	FALSE	0	usertype	0
+.xunlei.com	TRUE	/	FALSE	0	usrname	
+.vip.xunlei.com	TRUE	/	FALSE	1416301716	lx_login_u	poterxu@gmail.com
+.vip.xunlei.com	TRUE	/	FALSE	1416301716	lx_login_auto	1
+.vip.xunlei.com	TRUE	/	FALSE	0	in_xl	0
+.vip.xunlei.com	TRUE	/	FALSE	0	vas_type	3
+.vip.xunlei.com	TRUE	/	FALSE	0	anterpriseac	0%230
+.xunlei.com	TRUE	/	FALSE	0	lx_sessionid	A030ABA935731CC63A390BF5014CDFD227F9CAD773D1C5A28893D40B9A75266F1BB03D80CEFDCD26FD6581DBB028D5E92DCFF9860E0C0B1BA24E24EF9100D1AC
+.vip.xunlei.com	TRUE	/	FALSE	0	lx_login	218484461
+.vip.xunlei.com	TRUE	/	FALSE	0	last_userid	218484461
+.vip.xunlei.com	TRUE	/	FALSE	0	login_time	0.41337108612061
+.vip.xunlei.com	TRUE	/	FALSE	0	loadding_img	0
+.vip.xunlei.com	TRUE	/	FALSE	0	vip_isvip	1
+.vip.xunlei.com	TRUE	/	FALSE	0	vip_level	5
+.vip.xunlei.com	TRUE	/	FALSE	0	vip_paytype	5
+.vip.xunlei.com	TRUE	/	FALSE	0	user_type	1
+.vip.xunlei.com	TRUE	/	FALSE	0	vip_expiredate	2014-12-09
+.vip.xunlei.com	TRUE	/	FALSE	0	dl_enable	1
+.vip.xunlei.com	TRUE	/	FALSE	0	dl_size	3145728
+.vip.xunlei.com	TRUE	/	FALSE	0	dl_num	21
+.vip.xunlei.com	TRUE	/	FALSE	0	user_task_time	0.2682478427887
+.vip.xunlei.com	TRUE	/	FALSE	0	rw_list_open	1
+.xunlei.com	TRUE	/	FALSE	0	VERIFY_KEY	
+.vip.xunlei.com	TRUE	/	FALSE	0	queryTime	1
+.vip.xunlei.com	TRUE	/	FALSE	1729069718	_xltj	34a1413709718028b22c
+.vip.xunlei.com	TRUE	/	FALSE	0	bg_opentime	
+.vip.xunlei.com	TRUE	/	FALSE	0	moretasknum	0
+.vip.xunlei.com	TRUE	/	FALSE	0	dl_expire	365
+.vip.xunlei.com	TRUE	/	FALSE	1414314527	gdriveid	ACEC8CBF4E95080224FB820494FD3C59
+.vip.xunlei.com	TRUE	/	FALSE	0	task_nowclick	800256708446977
+.vip.xunlei.com	TRUE	/	FALSE	0	lx_nf_all	page_check_all%3Dcommtask%26class_check%3D0%26page_check%3Dcommtask%26fl_page_id%3D0%26class_check_new%3D0%26set_tab_status%3D4

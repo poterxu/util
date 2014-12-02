@@ -1,0 +1,20 @@
+digraph G {
+
+get_isp_info -> parse -> execute;
+
+get_isp_info -> init;
+
+get_isp_info -> cleanup;
+
+execute -> make_string;
+
+execute -> printf
+
+init -> make_string;
+
+get_isp_info -> printf;
+
+execute -> compare;
+get_isp_info[shape=circle, label="Get isp info"];
+
+}

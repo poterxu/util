@@ -1,0 +1,41 @@
+af check start...
+1> touch af: 
+RESULT: Focus_operation_success
+DAC: 152
+TIME: 1217
+2> touch af: 
+RESULT: Focus_operation_success
+DAC: 152
+TIME: 1187
+3> touch af: 
+RESULT: Focus_operation_success
+DAC: 152
+TIME: 1204
+4> touch af: 
+RESULT: Focus_operation_success
+DAC: 152
+TIME: 1223
+5> touch af: 
+RESULT: Focus_operation_success
+DAC: 152
+TIME: 1196
+1> caf: 
+RESULT: Focus_operation_success
+DAC: 168
+TIME: 1196
+2> caf: 
+RESULT: Focus_operation_success
+DAC: 168
+TIME: 1196
+3> caf: 
+RESULT: Focus_operation_success
+DAC: 168
+TIME: 1196
+4> caf: 
+RESULT: Focus_operation_success
+DAC: 168
+TIME: 1196
+5> caf: 
+RESULT: Focus_operation_success
+DAC: 168
+TIME: 1196

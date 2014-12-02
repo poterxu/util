@@ -1,0 +1,80 @@
+digraph G{
+label=<<FONT POINT-SIZE="40">isp_write</FONT>>;
+labeljust=l;
+labelloc=t;
+mode=KK;
+rankdir=LR;
+
+		label="fuji_open"
+alloc_kernel_buf[shape=circle, label="alloc fw\n kernel buffer"];
+
+
+
+	set_flash_erase_addr->flash_erase;
+	flash_erase->pll_set->set_ram_addr->set_ram_transfer_size->set_DRAM->set_SIO_mode->start_SIO_mode->pb3_pull_up;
+flash_erase->flash_erase[label="wait for\n erase complete"];
+pb3_pull_up->pb3_pull_up[label="sustain 1ms"];
+flash_erase->power_down[label="flash erase fail"];
+
+set_flash_erase_addr[shape=circle, label="set isp flash\n erase addr to 0"];
+flash_erase[shape=circle, label="flash erase"];
+pll_set[shape=circle, label="PLL\n set to 19.2MHz"];
+set_ram_addr[shape=circle, label="set target\n RAM addr to\n 0x20000000"];
+set_ram_transfer_size[shape=circle, label="set RAM size\n to 2M"];
+set_DRAM[shape=circle, label="set DRAM"];
+set_SIO_mode[shape=circle, label="set SIO mode"];
+start_SIO_mode[shape=circle, label="start SIO mode"];
+pb3_pull_up[shape=circle, label="PB3 pull up"];
+power_up[shape=circle, label="power up"];
+
+
+		flash_write->fw_checksum[label="flash write success"];
+	pb3_pull_down->pb3_pull_down[label="sustain 1ms"];
+	spi_transfer->pb3_pull_down->set_flash_write_addr->set_flash_write_size->flash_write;
+
+	flash_write->flash_write[label="wait for write complete"];
+flash_write->power_down[label="flash write fail"];
+	fw_checksum->power_down;
+
+	spi_transfer[shape=circle, label="SPI transfer fw\n to isp RAM"];
+	set_flash_write_addr[shape=circle, label="set flash\n write addr to 0"];
+	set_flash_write_size[shape=circle, label="set flash\n write size to 2M"];
+	flash_write[shape=circle, label="flash write"];
+fw_checksum[shape=circle, label="firmware\n checksum\n calculation"];
+pb3_pull_down[shape=circle, label="PB3 pull down"];
+
+
+
+cp_usr_to_kernel->power_up;
+
+
+
+
+power_down->release_kernel_buf[label="1. firmware checksum=0\n 2. flash write fail time > 3\n 3. flash erase fail time > 3\n 4. checksum!=0 times > 3"];
+
+	release_kernel_buf[shape=circle, label="Release fw\n kernel buf"];
+	cp_usr_to_kernel[shape=circle, label="Copy user buffer\n to kernel buf"];
+
+
+	
+release_kernel_buf->release_user_buf;
+alloc_fw_user_buffer->read_fw_file->alloc_kernel_buf->cp_usr_to_kernel;
+#cp_usr_to_kernel->power_up[ltail=cluster_m10mo_firmware_start];
+read_fw_file[shape=circle, label="read fw file\n to user buffer"];
+alloc_fw_user_buffer[shape=circle, label="alloc fw\n user buffer"];
+release_user_buf[shape=circle, label="Release fw\n user buf"];
+start [shape=Mdiamond];
+end [shape=Msquare];
+start->alloc_fw_user_buffer;
+release_user_buf->end;
+read_fw_file->release_user_buf[label="Open fw file fail"];
+alloc_kernel_buf->release_user_buf[label="Alloc kernel buf fail"];
+alloc_fw_user_buffer->end[label="Alloc user buf fail"];
+power_up->set_flash_erase_addr[lhead=cluster_power_up];
+pb3_pull_up->spi_transfer[lhead=cluster_m10mo_firmware_start, ltail=cluster_m10mo_firmware_write_sio];
+power_down->power_up[label="fw checksum != 0"];
+
+power_down[shape=circle, label="power down"];
+
+
+}

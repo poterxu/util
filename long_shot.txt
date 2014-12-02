@@ -1,0 +1,5 @@
+adb shell input tap 525 290
+@ping -n 2 127.1>nul
+adb shell input tap 221 105
+@ping -n 2 127.1>nul
+for /L %%i in (1,1,100) do adb shell input swipe 523 1792 524 1793 20000
